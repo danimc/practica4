@@ -9,6 +9,7 @@ $passcorrect = "123";
 if(isset($_session["usuario"])){
 	if($_session["usuario"] == $usercorrect && $_session["pass"] == $passcorrect){
 		echo "<h2> Bienvenido </h2>";
+		$_SESSION['estado'] = 'ok'; 
 		header('location: home.php');
 	}else{
 		echo "<h2> usuario o contraseña incorrecta </h2>";
